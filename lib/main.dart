@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './screens/categories_screen.dart';
 import './screens/categories_meals_screen.dart';
 import './utils/app_routes.dart';
+import './screens/meal_detail_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,11 +18,15 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Raleway',
         canvasColor: Color.fromRGBO(255, 254, 229, 1),
         textTheme: ThemeData.light().textTheme.copyWith(
-              // ignore: deprecated_member_use
-              title: TextStyle(
+              headline2: TextStyle(
                 fontSize: 20,
                 fontFamily: 'RobotoCondensed',
               ),
+              // ignore: deprecated_member_use
+              // title: TextStyle(
+              //   fontSize: 20,
+              //   fontFamily: 'RobotoCondensed',
+              // ),
             ),
       ),
       // home: CategoriesScreen(), também é possível chamar a tela principal através das rotas (routes)
@@ -31,7 +36,22 @@ class MyApp extends StatelessWidget {
       routes: {
         AppRoutes.HOME: (ctx) => CategoriesScreen(),
         AppRoutes.CATEGORIES_MEALS: (ctx) => CategoriesMealsScreen(),
+        AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(),
       },
+      // onGenerateRoute: (settings) {
+      //   if (settings.name == "/alguma-coisa") {
+      //     return null;
+      //   } else if (settings.name == "/outra-coisa") {
+      //     return null;
+      //   } else {
+      //     return MaterialPageRoute(
+      //       builder: (_) => CategoriesScreen(),
+      //     );
+      //   }
+      // },
+      // onUnknownRoute: (settings) {
+      //   return MaterialPageRoute(builder: (_) => CategoriesScreen());
+      // },
     );
   }
 }
