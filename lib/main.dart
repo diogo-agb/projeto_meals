@@ -3,6 +3,7 @@ import './screens/categories_screen.dart';
 import './screens/categories_meals_screen.dart';
 import './utils/app_routes.dart';
 import './screens/meal_detail_screen.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,12 +30,19 @@ class MyApp extends StatelessWidget {
               // ),
             ),
       ),
+      home: AnimatedSplashScreen(
+        backgroundColor: Colors.white,
+        splashTransition: SplashTransition.fadeTransition,
+        splash: "assets/meu_logo_2.png",
+        duration: 7000,
+        nextScreen: CategoriesScreen(),
+      ),
       // home: CategoriesScreen(), também é possível chamar a tela principal através das rotas (routes)
       // initialRoute: '/', Rota inicial poderia ser definida no initialRoute mas não funcionou
 
       // Definindo as rotas através da definição de contstantes
       routes: {
-        AppRoutes.HOME: (ctx) => CategoriesScreen(),
+        // AppRoutes.HOME: (ctx) => CategoriesScreen(),
         AppRoutes.CATEGORIES_MEALS: (ctx) => CategoriesMealsScreen(),
         AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(),
       },

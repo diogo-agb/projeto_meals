@@ -1,5 +1,5 @@
 name: meals
-description: A new Flutter project.
+description: An app for my portfolio.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  animated_splash_screen: ^1.0.0+1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -32,6 +33,15 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.7.5
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/meu_launcher_icon_2.png"
+  adaptive_icon_foreground: "assets/meu_launcher_icon_2.png"
+  adaptive_icon_background: "assets/meu_launcher_icon_2.png"
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -45,9 +55,12 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/meu_logo.png
+    - assets/meu_launcher_icon.png
+    - assets/meu_launcher_icon_2.png
+    - assets/meu_logo_2.png
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
