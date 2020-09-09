@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import './screens/categories_screen.dart';
+// import './screens/categories_screen.dart';
 import './screens/categories_meals_screen.dart';
 import './utils/app_routes.dart';
 import './screens/meal_detail_screen.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import './screens/tabs_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         splashTransition: SplashTransition.fadeTransition,
         splash: "assets/meu_logo_2.png",
         duration: 7000,
-        nextScreen: CategoriesScreen(),
+        nextScreen: TabsScreen(),
       ),
       // home: CategoriesScreen(), também é possível chamar a tela principal através das rotas (routes)
       // initialRoute: '/', Rota inicial poderia ser definida no initialRoute mas não funcionou
