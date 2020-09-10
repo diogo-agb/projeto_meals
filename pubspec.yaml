@@ -60,6 +60,7 @@ flutter:
     - assets/meu_launcher_icon.png
     - assets/meu_launcher_icon_2.png
     - assets/meu_logo_2.png
+    - assets/drawer_image.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
