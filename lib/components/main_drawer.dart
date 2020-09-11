@@ -37,6 +37,11 @@ class _MainDrawerState extends State<MainDrawer> {
                 image: AssetImage("assets/drawer_image.png"),
                 fit: BoxFit.scaleDown,
               ),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.pink[50], Colors.pink],
+              ),
             ),
             alignment: Alignment.bottomCenter,
             height: 250,
@@ -48,7 +53,7 @@ class _MainDrawerState extends State<MainDrawer> {
               style: TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 26,
-                color: Theme.of(context).primaryColor,
+                color: Colors.white,
                 fontFamily: 'RobotoCondensed',
               ),
             ),

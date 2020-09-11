@@ -31,10 +31,12 @@ class _TabsScreenState extends State<TabsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            _screens[_selectedScreenIndex]['title'],
-          ),
+        title: Row(
+          children: [
+            Text(
+              _screens[_selectedScreenIndex]['title'],
+            ),
+          ],
         ),
       ),
       drawer: Drawer(
