@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../utils/constants.dart';
+import '../utils/app_routes.dart';
 
 class MainDrawer extends StatefulWidget {
   @override
@@ -6,7 +8,7 @@ class MainDrawer extends StatefulWidget {
 }
 
 class _MainDrawerState extends State<MainDrawer> {
-  Widget _createItem(IconData icon, String label) {
+  Widget _createItem(IconData icon, String label, Function onTap) {
     return ListTile(
       leading: Icon(
         icon,
@@ -22,7 +24,7 @@ class _MainDrawerState extends State<MainDrawer> {
           color: Theme.of(context).primaryColor,
         ),
       ),
-      onTap: () {},
+      onTap: onTap,
     );
   }
 
@@ -35,7 +37,7 @@ class _MainDrawerState extends State<MainDrawer> {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage("assets/drawer_image.png"),
-                fit: BoxFit.scaleDown,
+                fit: BoxFit.fitWidth,
               ),
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
@@ -61,8 +63,31 @@ class _MainDrawerState extends State<MainDrawer> {
           SizedBox(
             height: 20,
           ),
-          _createItem(Icons.restaurant, 'Refeições'),
-          _createItem(Icons.settings, 'Configurações'),
+          _createItem(
+            Icons.restaurant,
+            'Refeições',
+            () => Navigator.of(context).pushReplacementNamed(AppRoutes.HOME),
+          ),
+          _createItem(
+            Icons.settings,
+            'Configurações',
+            () =>
+                Navigator.of(context).pushReplacementNamed(AppRoutes.SETTINGS),
+          ),
+          Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: Text("Versão: ${ConstantsApp.version}"),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
