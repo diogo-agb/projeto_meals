@@ -92,6 +92,7 @@ class MealDetailScreen extends StatelessWidget {
                 },
               ),
             ),
+            SizedBox(height: 70),
           ],
         ),
       ),
