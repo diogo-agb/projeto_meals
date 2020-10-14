@@ -76,7 +76,7 @@ class _MyAppState extends State<MyApp> {
       home: AnimatedSplashScreen(
         backgroundColor: Colors.white,
         splashTransition: SplashTransition.fadeTransition,
-        splash: "assets/meu_logo_2.png",
+        splash: "assets/cooking_splash.png",
         duration: 7000,
         nextScreen: TabsScreen(_favoriteMeals),
       ),
