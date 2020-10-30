@@ -39,12 +39,12 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/cooking2.png"
-  adaptive_icon_foreground: "assets/cooking2.png"
-  adaptive_icon_background: "assets/cooking2.png"
+  image_path: "assets/de_comer_launcher_logo.png"
+  # adaptive_icon_foreground: "assets/de_comer_launcher_logo.png"
+  # adaptive_icon_background: "assets/de_comer_launcher_logo.png"
 
 flutter_launcher_name:
-  name: "Larikas CooK"
+  name: "De-Comer"
 
 
 # For information on the generic Dart part of this file, see the
@@ -63,6 +63,8 @@ flutter:
     - assets/cooking2.png
     - assets/cooking_splash.png
     - assets/drawer_image.png
+    - assets/de_comer_launcher_logo.png
+    - assets/de_comer_splash.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

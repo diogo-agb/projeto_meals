@@ -35,9 +35,12 @@ class _MainDrawerState extends State<MainDrawer> {
         children: [
           Container(
             decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(width: 1, color: Colors.pink),
+              ),
               image: DecorationImage(
-                image: AssetImage("assets/drawer_image.png"),
-                fit: BoxFit.fitWidth,
+                image: AssetImage("assets/de_comer_splash.png"),
+                fit: BoxFit.fitHeight,
               ),
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
@@ -50,15 +53,15 @@ class _MainDrawerState extends State<MainDrawer> {
             width: double.infinity,
             padding: EdgeInsets.all(20),
             // color: Theme.of(context).accentColor,
-            child: Text(
-              "Vamos cozinhar?",
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                fontSize: 26,
-                color: Colors.white,
-                fontFamily: 'RobotoCondensed',
-              ),
-            ),
+            // child: Text(
+            //   "Vamos cozinhar?",
+            //   style: TextStyle(
+            //     fontWeight: FontWeight.w500,
+            //     fontSize: 26,
+            //     color: Colors.white,
+            //     fontFamily: 'RobotoCondensed',
+            //   ),
+            // ),
           ),
           SizedBox(
             height: 20,
